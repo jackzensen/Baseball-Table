@@ -1,0 +1,2 @@
+# Change API_KEY to your own API_key and rename file to ".env"
+API_KEY = 123456789
