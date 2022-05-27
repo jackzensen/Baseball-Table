@@ -9,7 +9,6 @@ function App() {
 
   const [data, setData] = useState([]);
   const [columns, setColumns] = useState([])
-  const [loadingData,setLoadingData] = useState(false)
   const [api, setApi] = useState('/teams')
   const [name, setName] = useState('')
 
@@ -67,9 +66,7 @@ function App() {
         alert("Failed to reach api")
         setTable([])
       }
-      setLoadingData(false)
     }
-    setLoadingData(true) 
     getBaseballData()
   }, [api])
 
