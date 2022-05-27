@@ -1,12 +1,22 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-
+// import { createTheme } from '@mui/material/styles';
+// import { common } from '@mui/material/colors';
 let api_key = process.env.REACT_APP_API_KEY;
 const axios = require('axios');
 
 function App() {
 
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: common[500],
+//     },
+//   },
+// });
+  
   const [data, setData] = useState([]);
   const [columns, setColumns] = useState([])
   const [loadingData,setLoadingData] = useState(false)
@@ -76,14 +86,22 @@ function App() {
     <div className="App">
       <div className ="trim">
         <div className="inner">
+         <div className="dataTable">
          <h1>Baseball Teams and Data</h1>
          <button onClick={() => changeApi('/teams')}>Back to teams</button>
-          <div style={{ display: 'flex', height: '78.5%'}}> 
-            <DataGrid className="dataTable" style={{color:'white', width: "100%"}}
+         </div>
+          <div style={{ display: 'flex'}}> 
+
+            <DataGrid className="dataTable" style={{color:'white', width: "100%", height: "70.5vh" }}
               onCellDoubleClick={(gridCell => changeApi(gridCell.id))}
             columns={columns}
             rows={data}
-            
+            sx={{
+              height: '30px',
+              '& .MuiButtonBase-root': {
+                color: 'white',
+              },
+            }}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 # MLB Team Website
 
-This self-hosted webpage allows for one to view current MLB teams, sort and filter them by their league and division, and more closely analyze the statistics of individual teams and players.
+This self-hosted webpage allows for one to view current MLB teams, sort and filter them by their league and division, and more view more information regarding individual teams and players.
 
 
 ## Requirements

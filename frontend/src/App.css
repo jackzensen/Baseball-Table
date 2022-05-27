@@ -1,20 +1,15 @@
-.toolbarContainer{
-  /* color: white; */
-}
 .dataTable{
+  font-size: 2vh;
   text-align: center;
-  height: 25vh;
+  /* height: 20vh; */
   color: white;
 }
 
 .inner{
-  /* background-color: #13294B; */
   position: absolute;
-  /* background-color: #FFC52F; */
   background-color: #13294B;
-  /* height: 10vh; */
   width: 120%;
-  height: 80vh;
+  height: 100vh;
   left: 0%;
   top: 50%;
 }
