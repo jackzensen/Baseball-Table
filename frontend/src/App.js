@@ -96,26 +96,26 @@ function App() {
 
             <DataGrid style={{color:'white', width: "100%", height: "70.5vh" }}
                 onRowDoubleClick={(gridCell => doubleClicked(gridCell))}
-            columns={columns}
-            rows={data}
-            sx={{
-              height: '30px',
-              '& .MuiButtonBase-root': {
-                color: 'white',
-              },
-              '& .MuiTablePagination-selectLabel':{
-                color: 'white'
-              },
-              '& .MuiTablePagination-select':{
-                color: 'white'
-              },
-              '& .MuiTablePagination-displayedRows':{
-                color: 'white'
-              },
-              '& .MuiTablePagination-actions':{
-                color: 'white'
-              },
-            }}
+                columns={columns}
+                rows={data}
+                sx={{
+                  height: '30px',
+                  '& .MuiButtonBase-root': {
+                    color: 'white',
+                  },
+                  '& .MuiTablePagination-selectLabel':{
+                    color: 'white'
+                  },
+                  '& .MuiTablePagination-select':{
+                    color: 'white'
+                  },
+                  '& .MuiTablePagination-displayedRows':{
+                    color: 'white'
+                  },
+                  '& .MuiTablePagination-actions':{
+                    color: 'white'
+                  },
+                }}
             />
           </div>
         </div>
