@@ -1,22 +1,12 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-// import { createTheme } from '@mui/material/styles';
-// import { common } from '@mui/material/colors';
+
 let api_key = process.env.REACT_APP_API_KEY;
 const axios = require('axios');
 
 function App() {
 
-
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: common[500],
-//     },
-//   },
-// });
-  
   const [data, setData] = useState([]);
   const [columns, setColumns] = useState([])
   const [loadingData,setLoadingData] = useState(false)
