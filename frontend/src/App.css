@@ -1,25 +1,19 @@
-.dataTable{
-  font-size: 2vh;
-  text-align: center;
-  /* height: 20vh; */
-  color: white;
-}
-
 .inner{
   position: absolute;
-  background-color: #13294B;
-  width: 120%;
-  height: 100vh;
-  left: 0%;
-  top: 50%;
+  /* background-color: #13294B; */
+  background-color: #646464;
+  width: 60%;
+  /* height: 100vh;  */
+  height: 90%;
+  left: 20%;
+  /* margin-right: 20%; */
+  top: 10%;
 }
 .trim{
   position: absolute;
-  /* background-color: #13294B; */
-  background-color: #FFC52F;
-  width: 50%;
-  top: 10%;
-  left: 20%
+  background-image: url("https://wallpaperaccess.com/full/6075677.png");
+  width: 100%;
+  height: 100%
 }
 .App {
   text-align: center;

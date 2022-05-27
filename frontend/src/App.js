@@ -21,6 +21,7 @@ function App() {
   const [columns, setColumns] = useState([])
   const [loadingData,setLoadingData] = useState(false)
   const [api, setApi] = useState('/teams')
+  const [name, setName] = useState('')
 
   function setTable(res) {
     
@@ -82,24 +83,47 @@ function App() {
     getBaseballData()
   }, [api])
 
+  function doubleClicked(gridCell){
+    setName(gridCell.row.name)
+    changeApi(gridCell.id);
+  }
+
+  function resetButton(){
+    changeApi('/teams')
+    setName('')
+  }
+  
   return (
     <div className="App">
       <div className ="trim">
         <div className="inner">
-         <div className="dataTable">
-         <h1>Baseball Teams and Data</h1>
-         <button onClick={() => changeApi('/teams')}>Back to teams</button>
+         <div>
+         <h1>MLB Team Rosters</h1>
+         <p>{name}</p>
+         <button onClick={() => resetButton()}>Back to teams</button>
          </div>
           <div style={{ display: 'flex'}}> 
 
-            <DataGrid className="dataTable" style={{color:'white', width: "100%", height: "70.5vh" }}
-              onCellDoubleClick={(gridCell => changeApi(gridCell.id))}
+            <DataGrid style={{color:'white', width: "100%", height: "70.5vh" }}
+                onRowDoubleClick={(gridCell => doubleClicked(gridCell))}
             columns={columns}
             rows={data}
             sx={{
               height: '30px',
               '& .MuiButtonBase-root': {
                 color: 'white',
+              },
+              '& .MuiTablePagination-selectLabel':{
+                color: 'white'
+              },
+              '& .MuiTablePagination-select':{
+                color: 'white'
+              },
+              '& .MuiTablePagination-displayedRows':{
+                color: 'white'
+              },
+              '& .MuiTablePagination-actions':{
+                color: 'white'
               },
             }}
             />
