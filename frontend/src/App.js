@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 let api_key = process.env.REACT_APP_API_KEY;
 const axios = require('axios');
@@ -27,7 +27,7 @@ function App() {
 
     //Set table for response length 1 (A response of length one is just an object, rather than an array of objects)
     else{
-      for (var key in res.data){
+      for (let key in res.data){
         cols.push({"field": key, "headerName": key.toUpperCase(), flex:1, minWidth:125}) //Creates object with valid syntax for datagrid
       }
       var tempo = []
